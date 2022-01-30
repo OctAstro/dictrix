@@ -139,7 +139,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?encode=text</span>
+				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=text</span>
 		</p>
 		<p>随机输出一条语录，包含<strong>作者(author)</strong>曰: <strong>一句(text)</strong>。</p>
 
@@ -148,13 +148,13 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?encode=js</span>
+				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=js</span>
 		</p>
 		<p>随机输出一条语录，包含<strong>作者(author)</strong>曰: <strong>一句(text)</strong>的js代码。</p>
 		<p>将下面的代码插入任意位置，将自动替换为一句：</p>
 		<p>
 			<span class="code">&lt;script src=&quot;
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=dictum&amp;encode=js&quot;&gt;&lt;/script&gt;&lt;script&gt;dictum();&lt;/script&gt;</span>
+				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=js&quot;&gt;&lt;/script&gt;&lt;script&gt;dictum();&lt;/script&gt;</span>
 		</p>
 
 		<p>
@@ -162,7 +162,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?encode=custom</span>
+				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=custom</span>
 		</p>
 		<p>随机输出一条语录，可自定义格式。</p>
 		<table class="mdui-table mdui-table-hoverable">
@@ -201,7 +201,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</table>
 		<p>
 			<span class="code">实例:
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?encode=custom&custom=来自 [creator] 的第 [uid] 条嘲讽: [author]说过: [text]</span>
+				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=custom&custom=来自 [creator] 的第 [uid] 条嘲讽: [author]说过: [text]</span>
 		</p>
 		<p>
 			<a href='../'>返回主页</a>

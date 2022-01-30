@@ -15,14 +15,13 @@
     }
     
     include '../config/database.php';
-    include '../config/siteinfo.php';
     
-    $encode = isset($_REQUEST["encode"]) ? $_REQUEST["encode"] : 'json';
+    $type = isset($_REQUEST["type"]) ? $_REQUEST["type"] : 'json';
     
-    $apifile = './encodes/'.$encode.'.php';
+    $apifile = './type/'.$type.'.php';
     
     if(!file_exists($apifile))
-        $encode='json';
+        $type='json';
     
     $con = mysqli_connect($dbhost, $dbname, $dbpasswd , $dbname);
     
