@@ -37,6 +37,11 @@
 
 还没写
 
+
+## 🎶 其他语言
+[ImJingLan/Sentence](https://github.com/ImJingLan/sentence/) - A Sentence PHP版本（稳定，停止开发）
+[ImJingLan/Dictum_Python](https://github.com/ImJingLan/dictum_python/) - 这个项目的Python版本（重构中）
+
 ## 🍟贡献者
 
 感谢这些很优秀的人：
@@ -56,4 +61,4 @@
 
 **Dictum** © [ImJingLan](https://github.com/ImJingLan)，基于 [MIT](./LICENSE) 许可证发行。<br>
 
-> [i.lite.cafe](https://i.lite.cafe) · GitHub [@ImJingLan](https://github.com/ImJingLan)
+> [yurik.cafe](https://yurik.cafe) · GitHub [@ImJingLan](https://github.com/ImJingLan)
