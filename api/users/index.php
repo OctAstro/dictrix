@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == 1) {
 
-    $token = $_SESSION['userToken'];
+    $token = isset($_SESSION['userToken']) ? $_SESSION['userToken'] : '';
 }
 
 include '../../config/config.php';

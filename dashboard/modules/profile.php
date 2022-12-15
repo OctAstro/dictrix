@@ -143,6 +143,7 @@ function update() {
                     $('#newPass').val('');
                     $('#verifyPass').val('');
                     alert("密码修改完成，请重新登陆");
+                    location.href = '../api/users/?module=logout'
                 } else {
                     if (a['code'] == 403) {
                         alert(a['msg']);
@@ -176,7 +177,6 @@ function refreshToken() {
                 oldToken: '<?php echo $_SESSION['userToken']; ?>',
             },
             function(a) {
-                console.log(a);
                 a = JSON.parse(a);
                 if (a['code'] == 200) {
                     alert("令牌刷新成功，请重新登陆");

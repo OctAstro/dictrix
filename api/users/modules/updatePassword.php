@@ -26,9 +26,9 @@ if (mysqli_num_rows($result) > 0) {
             $salt1 = salt(10);
             $salt2 = salt(10);
             $newPass = $salt1 . $newPass . $salt2;
-            $sqla = "UPDATE `" . $Usersdb . "` SET `passwd`='" . base64_encode(password_hash($newPass, PASSWORD_BCRYPT)) . "' WHERE token=" . $token . "";
-            $sqlb = "UPDATE `" . $Usersdb . "` SET `salt1`='" . $salt1 . "' WHERE id=" . $userId . "";
-            $sqlc = "UPDATE `" . $Usersdb . "` SET `salt2`='" . $salt2 . "' WHERE id=" . $userId . "";
+            $sqla = "UPDATE `" . $Usersdb . "` SET `passwd`='" . base64_encode(password_hash($newPass, PASSWORD_BCRYPT)) . "' WHERE `token`='" . $token . "'";
+            $sqlb = "UPDATE `" . $Usersdb . "` SET `salt1`='" . $salt1 . "' WHERE `token`='" . $token . "'";
+            $sqlc = "UPDATE `" . $Usersdb . "` SET `salt2`='" . $salt2 . "' WHERE `token`='" . $token . "'";
             mysqli_query($conn, $sqla);
             mysqli_query($conn, $sqlb);
             mysqli_query($conn, $sqlc);

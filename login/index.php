@@ -111,7 +111,6 @@ if (isset($_SESSION['isLogin'])) {
                     passwd: passwd,
                 },
                 function(a) {
-                    console.log(a);
                     var a = JSON.parse(a);
                     if (a['code'] == 200) {
                         location.href = '../dashboard';
