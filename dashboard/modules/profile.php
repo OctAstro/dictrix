@@ -55,6 +55,10 @@ $siteInfo = [
                                 <td style="width: 30%"><b>访问密钥</b></td>
                                 <td><?php echo htmlspecialchars($_SESSION['userToken']); ?></td>
                             </tr>
+                            <tr>
+                                <td style="width: 30%"><b>注册时间</b></td>
+                                <td><?php echo htmlspecialchars(date('Y-m-d H:i:s', $_SESSION['reg_date'])); ?></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
