@@ -24,6 +24,8 @@
 <summary>点击查看完整功能列表</summary>
 
 - [x] 随机语句
+- [x] 公开API接口
+- [x] 用户TOKEN
 
 </details>
 
