@@ -1,6 +1,2 @@
 <?php
-include "../config/siteinfo.php";
-
-echo json_encode(array( 'sitename'=> $sitename, "describe"=> $describe , 'submit'=>$tg , 'keyword'=>$keyword) );
-
-?>
+echo json_encode(array('sitename' => $dictumConfig['sitename'], "describe" => $dictumConfig['description']));

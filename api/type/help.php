@@ -1,6 +1,6 @@
 <?php
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ?
-            "https://": "http://";
+"https://" : "http://";
 ?>
 <!doctype html>
 <html>
@@ -23,25 +23,25 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
                 padding: 5vh 10vw;
                 color: #121314;
             }
-            
+
             h1 {
                 font-size: 4.5em;
                 font-weight: 500;
                 margin-bottom: 0;
             }
-            
+
             h2 {
                 font-size: 2.5em;
                 font-weight: 500;
                 margin-bottom: 0;
             }
-            
+
             p {
                 font-size: 1.6em;
                 font-weight: 300;
                 line-height: 1.4;
             }
-            
+
             span.code {
                 font-size: 0.8em;
                 font-weight: 300;
@@ -51,7 +51,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
                 text-align: center;
                 padding: 3px 15px 3px 15px;
             }
-            
+
             p.author {
                 font-size: 1.6em;
                 font-weight: 300;
@@ -59,20 +59,20 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
                 max-width: 28em;
                 text-align: right;
             }
-            
+
             .footer{
                 font-size: 1em;
                 font-weight: 300;
                 line-height: 1.4;
                 max-width: 30em;
             }
-            
+
             a {
                 text-decoration: none;
                 color: #121314;
                 position: relative;
             }
-            
+
             a:after {
                 content: '';
                 position: absolute;
@@ -84,7 +84,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
                 transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
                 background-color: rgba(79, 192, 141, 0.5);
             }
-            
+
             a:hover:after {
                 top: -2%;
             }
@@ -100,7 +100,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api</span>
+				<?php echo $protocol . $_SERVER['HTTP_HOST'] ?>/api</span>
 		</p>
 		<p>随机输出一条语录，包含完整的语录信息：一句ID(id)，一句出处(author)，创建者(creator)，一句正文(dictum)</p>
 
@@ -139,22 +139,22 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=text</span>
+				<?php echo $protocol . $_SERVER['HTTP_HOST'] ?>/api/?type=text</span>
 		</p>
-		<p>随机输出一条语录，包含<strong>作者(author)</strong>曰: <strong>一句(text)</strong>。</p>
+		<p>随机输出一条语录，包含<strong>句子正文</strong>。</p>
 
 		<p>
 			<strong>3.JS格式</strong>
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=js</span>
+				<?php echo $protocol . $_SERVER['HTTP_HOST'] ?>/api/?type=js</span>
 		</p>
-		<p>随机输出一条语录，包含<strong>作者(author)</strong>曰: <strong>一句(text)</strong>的js代码。</p>
+		<p>随机输出一条语录，包含<strong>句子{dictum}——作者{author}</strong>的js代码。</p>
 		<p>将下面的代码插入任意位置，将自动替换为一句：</p>
 		<p>
 			<span class="code">&lt;script src=&quot;
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=js&quot;&gt;&lt;/script&gt;&lt;script&gt;dictum();&lt;/script&gt;</span>
+				<?php echo $protocol . $_SERVER['HTTP_HOST'] ?>/api/?type=js&quot;&gt;&lt;/script&gt;&lt;script&gt;dictum();&lt;/script&gt;</span>
 		</p>
 
 		<p>
@@ -162,7 +162,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</p>
 		<p>
 			<span class="code">
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=custom</span>
+				<?php echo $protocol . $_SERVER['HTTP_HOST'] ?>/api/?type=custom</span>
 		</p>
 		<p>随机输出一条语录，可自定义格式。</p>
 		<table class="mdui-table mdui-table-hoverable">
@@ -181,9 +181,9 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 				</tr>
 				<tr>
 					<td>
-						<strong>[text]</strong>
+						<strong>[dictum]</strong>
 					</td>
-					<td>语句(text)</td>
+					<td>语句(dictum)</td>
 				</tr>
 				<tr>
 					<td>
@@ -201,7 +201,7 @@ $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERV
 		</table>
 		<p>
 			<span class="code">实例:
-				<?php echo $protocol.$_SERVER['HTTP_HOST'] ?>/api/?type=custom&custom=来自 [creator] 的第 [uid] 条嘲讽: [author]说过: [text]</span>
+				<?php echo $protocol . $_SERVER['HTTP_HOST'] ?>/api/?type=custom&custom=来自 [creator] 的第 [uid] 条嘲讽: [author]说过: [dictum]</span>
 		</p>
 		<p>
 			<a href='../'>返回主页</a>
