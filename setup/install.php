@@ -79,7 +79,8 @@ email VARCHAR(255) NOT NULL,
 salt1 VARCHAR(255) NOT NULL,
 salt2 VARCHAR(255) NOT NULL,
 usergroup VARCHAR(255),
-token VARCHAR(255)
+token VARCHAR(255),
+reg_date VARCHAR(255)
 )";
 
     mysqli_query($con, $sqlquery);
@@ -89,7 +90,7 @@ token VARCHAR(255)
 
     $passwd = $salt1 . $passwd . $salt2;
 
-    $sqlquery = "INSERT INTO " . $dbusers . " (`username`, `passwd`, `email` , `salt1`, `salt2`, `usergroup`,`token`) VALUES ('" . $username . "', '" . base64_encode(password_hash($passwd, PASSWORD_BCRYPT)) . "', '" . $email . "' ,'" . $salt1 . "', '" . $salt2 . "', 'root','{$token}');";
+    $sqlquery = "INSERT INTO " . $dbusers . " (`username`, `passwd`, `email` , `salt1`, `salt2`, `usergroup`,`token`,`reg_date`) VALUES ('" . $username . "', '" . base64_encode(password_hash($passwd, PASSWORD_BCRYPT)) . "', '" . $email . "' ,'" . $salt1 . "', '" . $salt2 . "', 'root','{$token}','" . time() . "');";
 
     mysqli_query($con, $sqlquery);
 

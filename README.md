@@ -24,8 +24,6 @@
 <summary>点击查看完整功能列表</summary>
 
 - [x] 随机语句
-- [x] 公开API接口
-- [x] 用户TOKEN
 
 </details>
 
@@ -48,7 +46,7 @@
 
 感谢这些很优秀的人：
 
-| [<img src="https://avatars.githubusercontent.com/u/62010497" width="100px;"/><br /><sub><b>ImJingLan</b></sub>](https://yurik.cafe/)<br />[💻]("编码") [📖]("文档") [💡]("示例") |
+| [<img src="https://avatars.githubusercontent.com/u/62010497" width="100px;"/><br /><sub><b>ImJingLan</b></sub>](https://i.lite.cafe/)<br />[💻]("编码") [📖]("文档") [💡]("示例") |
 | :----------------------------------------------------------: |
 
 该项目遵循 [所有参与者](https://github.com/kentcdodds/all-contributors) 规范。 
