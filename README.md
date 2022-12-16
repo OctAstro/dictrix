@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://raw.githubusercontent.com/ImJingLan/dictum/master/assets/brand/logo.svg" width="50">Dictum</h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/ImJingLan/dictum/master/assets/brand/logo.svg" width="50">Dictrix | 言矩</h1>
 <p align="center">
   <a href="./LICENSE"><img alt="LICENSE MIT" src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge"></a>
 </p>
@@ -29,6 +29,10 @@
 
 ## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">  待完成功能
 - [ ] 后台管理
+- [ ] 自定义主题
+- [ ] 举报系统
+- [ ] 用户注册
+
 
 ## ⭐️ 安装
 还没写。。。
