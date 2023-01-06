@@ -1,7 +1,14 @@
 <?php
 session_start();
 $module = isset($_GET['page']) ? $_GET['page'] : "home";
-include 'plugins/checkIsLogin.php'
+include 'plugins/checkIsLogin.php';
+
+$modules = [
+    'home' => "管理面板",
+    'profile' => "用户信息",
+    'dictumList' => "语句列表",
+    'addDictum' => "创建语句",
+];
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +18,7 @@ include 'plugins/checkIsLogin.php'
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>管理面板 :: - </title>
+    <title>管理后台 | Dictrix Panle</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../assets/panel/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
@@ -87,13 +94,15 @@ include 'plugins/checkIsLogin.php'
                         </li>
                         <li class="nav-header">语句管理</li>
                         <li class="nav-item">
-                            <a href="dictumList" class="nav-link <?php echo $module == "proxies" ? "active" : ""; ?>">
+                            <a href="?page=dictumList"
+                                class="nav-link <?php echo $module == "dictumList" ? "active" : ""; ?>">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>语句列表</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="addDictum" class="nav-link <?php echo $module == "addproxy" ? "active" : ""; ?>">
+                            <a href="?page=addDictum"
+                                class="nav-link <?php echo $module == "addDictum" ? "active" : ""; ?>">
                                 <i class="nav-icon fas fa-plus"></i>
                                 <p>创建语句</p>
                             </a>
@@ -108,10 +117,16 @@ include 'plugins/checkIsLogin.php'
         <div class="content-wrapper">
 
             <?php
-if (isset($_GET['page']) && preg_match("/^[A-Za-z0-9\_\-]{1,16}$/", $_GET['page'])) {
-    include './modules/' . $_GET['page'] . '.php';
-} else {
-    include './modules/home.php';
+try {
+    if (isset($_GET['page']) && preg_match("/^[A-Za-z0-9\_\-]{1,16}$/", $_GET['page'])) {
+        if (file_exists('./modules/' . $_GET['page'] . '.php')) {
+            include './modules/' . $_GET['page'] . '.php';} else {throw new Exception();
+        }
+    } else {
+        include './modules/home.php';
+    }
+} catch (Exception $e) {
+    include './modules/404.php';
 }
 ?>
         </div>
@@ -123,9 +138,9 @@ if (isset($_GET['page']) && preg_match("/^[A-Za-z0-9\_\-]{1,16}$/", $_GET['page'
         <!-- /.control-sidebar -->
         <!-- Main Footer -->
         <footer class="main-footer">
-            <strong>Copyright &copy; .</strong>
+            <strong>Copyright &copy; Dictrix Panle.</strong>
             All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">Powered by <b>Dictuming</b>
+            <div class="float-right d-none d-sm-inline-block">Powered by <b>Dictrix</b>
             </div>
         </footer>
     </div>

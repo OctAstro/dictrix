@@ -1,8 +1,8 @@
 <?php
 $siteInfo = [
     'pageTitle' => "管理面板",
+    'describe' => "欢迎来到 Dictum 管理面板",
 ];
-
 ?>
 
 <div class="content-header">
@@ -10,8 +10,8 @@ $siteInfo = [
         <div class="row mb-2">
             <div class="col-sm-6">
                 <h1 class="m-0 text-dark">
-                    <?php echo $siteInfo['pageTitle']; ?>&nbsp;&nbsp;<small class="text-muted text-xs">欢迎来到 Dictum
-                        管理面板</small>
+                    <?php echo $siteInfo['pageTitle']; ?>&nbsp;&nbsp;<small
+                        class="text-muted text-xs"><?php echo $siteInfo['describe']; ?></small>
                 </h1>
             </div>
             <div class="col-sm-6">

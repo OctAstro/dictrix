@@ -1,6 +1,7 @@
 <?php
 $siteInfo = [
     'pageTitle' => "用户信息",
+    'describe' => "查看你的个人信息",
 ];
 ?>
 
@@ -9,7 +10,8 @@ $siteInfo = [
         <div class="row mb-2">
             <div class="col-sm-6">
                 <h1 class="m-0 text-dark">
-                    <?php echo $siteInfo['pageTitle']; ?>&nbsp;&nbsp;<small class="text-muted text-xs">查看您的个人信息</small>
+                    <?php echo $siteInfo['pageTitle']; ?>&nbsp;&nbsp;<small
+                        class="text-muted text-xs"><?php echo $siteInfo['describe']; ?></small>
                 </h1>
             </div>
             <div class="col-sm-6">
