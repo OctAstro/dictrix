@@ -62,13 +62,13 @@ if (file_exists('setup.lock')) {
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 author VARCHAR(255) NOT NULL,
 creator VARCHAR(255) NOT NULL,
-dictum VARCHAR(255),
-reg_date TIMESTAMP
+dictum text, 
+create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 )";
 
     mysqli_query($con, $sqlquery);
 
-    $sqlquery = "INSERT INTO  " . $dbdictum . " (`author`, `creator`, `dictum`, `reg_date`) VALUES ('RGljdHVtIFRlYW0=', 'RGljdHVtIFRlYW0=', '5LuW5Lus6K+06KaB5oiS5LqG5L2g55qE54uC77yM5bCx5YOP5pOm5o6J5LqG5rGh5Z6i', current_timestamp());";
+    $sqlquery = "INSERT INTO  " . $dbdictum . " (`author`, `creator`, `dictum`, `create_date`) VALUES ('RGljdHVtIFRlYW0=', 'RGljdHVtIFRlYW0=', '5LuW5Lus6K+06KaB5oiS5LqG5L2g55qE54uC77yM5bCx5YOP5pOm5o6J5LqG5rGh5Z6i', current_timestamp());";
     mysqli_query($con, $sqlquery);
 
     $sqlquery = "CREATE TABLE " . $dbusers . " (

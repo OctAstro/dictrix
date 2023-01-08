@@ -8,12 +8,12 @@ if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == 1) {
 
 include '../../config/config.php';
 
-$dbHost = mysqlInfo('host', $dictumConfig);
-$dbUser = mysqlInfo('user', $dictumConfig);
-$dbPasswd = mysqlInfo('pass', $dictumConfig);
-$dbName = mysqlInfo('name', $dictumConfig);
-$dbPort = mysqlInfo('port', $dictumConfig);
-$dbPrefix = mysqlInfo('prefix', $dictumConfig);
+$dbHost = $dictumConfig['mysql']['host'];
+$dbUser = $dictumConfig['mysql']['user'];
+$dbPasswd = $dictumConfig['mysql']['pass'];
+$dbName = $dictumConfig['mysql']['name'];
+$dbPort = $dictumConfig['mysql']['port'];
+$dbPrefix = $dictumConfig['mysql']['prefix'];
 
 $module = isset($_GET['module']) ? $_GET['module'] : "info";
 

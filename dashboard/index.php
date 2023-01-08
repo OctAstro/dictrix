@@ -27,6 +27,9 @@ $modules = [
     <link rel="stylesheet" href="../assets/panel/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script src="../assets/panel/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/panel/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/panel/dist/js/adminlte.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -107,6 +110,13 @@ $modules = [
                                 <p>创建语句</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="?page=dictumDetail"
+                                class="nav-link <?php echo $module == "dictumDetail" ? "active" : ""; ?>">
+                                <i class="nav-icon fas fa-info"></i>
+                                <p>语句信息</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -144,14 +154,7 @@ try {
             </div>
         </footer>
     </div>
-    <!-- ./wrapper -->
-    <!-- REQUIRED SCRIPTS -->
-    <!-- jQuery -->
-    <script src="../assets/panel/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../assets/panel/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE -->
-    <script src="../assets/panel/dist/js/adminlte.js"></script>
+
 </body>
 
 </html>

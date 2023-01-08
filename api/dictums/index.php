@@ -2,12 +2,12 @@
 
 include '../../config/config.php';
 
-$dbHost = mysqlInfo('host', $dictumConfig);
-$dbUser = mysqlInfo('user', $dictumConfig);
-$dbPasswd = mysqlInfo('pass', $dictumConfig);
-$dbName = mysqlInfo('name', $dictumConfig);
-$dbPort = mysqlInfo('port', $dictumConfig);
-$dbPrefix = mysqlInfo('prefix', $dictumConfig);
+$dbHost = $dictumConfig['mysql']['host'];
+$dbUser = $dictumConfig['mysql']['user'];
+$dbPasswd = $dictumConfig['mysql']['pass'];
+$dbName = $dictumConfig['mysql']['name'];
+$dbPort = $dictumConfig['mysql']['port'];
+$dbPrefix = $dictumConfig['mysql']['prefix'];
 
 $type = isset($_REQUEST["module"]) ? $_REQUEST["module"] : 'json';
 
