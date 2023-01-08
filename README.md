@@ -20,6 +20,7 @@
 ![screenshot.png](https://raw.githubusercontent.com/ImJingLan/dictum/master/screenshot.png)
 
 ## ⚡ 功能
+
 <details>
 <summary>点击查看完整功能列表</summary>
 
@@ -27,41 +28,44 @@
 
 </details>
 
-## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">  待完成功能
+## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 待完成功能
+
 - [ ] 后台管理
 - [ ] 自定义主题
 - [ ] 举报系统
 - [ ] 用户注册
 
-
 ## ⭐️ 安装
+
 还没写。。。
 
 ## 📄 更新日志
 
 还没写
 
-
 ## 🎶 其他语言
-[ImJingLan/Sentence](https://github.com/ImJingLan/sentence/) - A Sentence PHP版本（稳定，停止开发）
-[ImJingLan/Dictum_Python](https://github.com/ImJingLan/dictum_python/) - 这个项目的Python版本（重构中）
 
-## 🍟贡献者
+[ImJingLan/Sentence](https://github.com/ImJingLan/sentence/) - A Sentence PHP 版本（稳定，停止开发，不支持高版本 PHP）
+
+[ImJingLan/Dictum_Python](https://github.com/ImJingLan/dictum_python/) - 这个项目的 Python 版本（重构中）
+
+## 🍟 贡献者
 
 感谢这些很优秀的人：
 
 | [<img src="https://avatars.githubusercontent.com/u/62010497" width="100px;"/><br /><sub><b>ImJingLan</b></sub>](https://i.lite.cafe/)<br />[💻]("编码") [📖]("文档") [💡]("示例") |
-| :----------------------------------------------------------: |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
-该项目遵循 [所有参与者](https://github.com/kentcdodds/all-contributors) 规范。 
+该项目遵循 [所有参与者](https://github.com/kentcdodds/all-contributors) 规范。
 
-## 💴赞助
+## 💴 赞助
+
 | <img src="https://raw.githubusercontent.com/ImJingLan/imjinglan/main/wxreward.jpg" width="160px;"/><br /><b>微信</b><br /> | <img src="https://raw.githubusercontent.com/ImJingLan/imjinglan/main/alipay.jpg" width="160px;"/><br /><b>支付宝</b><br /> |
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| :------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
 
 欢迎捐助！
 
-## 🎨作者
+## 🎨 作者
 
 **Dictum** © [ImJingLan](https://github.com/ImJingLan)，基于 [MIT](./LICENSE) 许可证发行。<br>
 
