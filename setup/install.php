@@ -6,7 +6,7 @@ function removeDir($dirName)
         return false;
     }
     $handle = @opendir($dirName);
-    while (($file = @readdir($handle)) !== false) { //判断是不是文件 .表示当前文件夹 ..表示上级文件夹 =2
+    while (($file = @readdir($handle)) !== false) {
         if ($file != '.' && $file != '..') {
             $dir = $dirName . '/' . $file;
             is_dir($dir) ? removeDir($dir) : @unlink($dir);
@@ -48,10 +48,10 @@ if (file_exists('setup.lock')) {
     $description = str_replace("'", "\\'", $description);
 
     $username = $_POST['username'];
-    $passwd = $_POST['passwd'];
+    $password = $_POST['password'];
     $email = base64_encode($_POST['email']);
 
-    $token = md5(sha1($username . $passwd . $email . mt_rand(0, 99999999) . time()));
+    $token = md5(sha1($username . $password . $email . mt_rand(0, 99999999) . time()));
 
     $dbdictum = $dbPrefix . 'dictum';
     $dbusers = $dbPrefix . 'users';
@@ -68,13 +68,13 @@ create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 
     mysqli_query($con, $sqlquery);
 
-    $sqlquery = "INSERT INTO  " . $dbdictum . " (`author`, `creator`, `dictum`, `create_date`) VALUES ('RGljdHVtIFRlYW0=', 'RGljdHVtIFRlYW0=', '5LuW5Lus6K+06KaB5oiS5LqG5L2g55qE54uC77yM5bCx5YOP5pOm5o6J5LqG5rGh5Z6i', current_timestamp());";
+    $sqlquery = "INSERT INTO  " . $dbdictum . " (`author`, `creator`, `dictum`, `create_date`) VALUES ('5pqu5YWJ5LmL5Z+O=', 'WXVyaWs=', '5rWu5LiW5LiH5Y2D77yM5ZC+54ix5pyJ5LiJ44CC5pel77yM5pyI5LiO5Y2/44CC5pel5Li65pyd77yM5pyI5Li65pqu77yM5Y2/5Li65pyd5pyd5pqu5pqu44CC', current_timestamp());";
     mysqli_query($con, $sqlquery);
 
     $sqlquery = "CREATE TABLE " . $dbusers . " (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(255) NOT NULL,
-passwd VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL,
 salt1 VARCHAR(255) NOT NULL,
 salt2 VARCHAR(255) NOT NULL,
@@ -88,9 +88,9 @@ reg_date VARCHAR(255)
     $salt1 = salt(10);
     $salt2 = salt(10);
 
-    $passwd = $salt1 . $passwd . $salt2;
+    $password = $salt1 . $password . $salt2;
 
-    $sqlquery = "INSERT INTO " . $dbusers . " (`username`, `passwd`, `email` , `salt1`, `salt2`, `usergroup`,`token`,`reg_date`) VALUES ('" . $username . "', '" . base64_encode(password_hash($passwd, PASSWORD_BCRYPT)) . "', '" . $email . "' ,'" . $salt1 . "', '" . $salt2 . "', 'root','{$token}','" . time() . "');";
+    $sqlquery = "INSERT INTO " . $dbusers . " (`username`, `password`, `email` , `salt1`, `salt2`, `usergroup`,`token`,`reg_date`) VALUES ('" . $username . "', '" . base64_encode(password_hash($password, PASSWORD_BCRYPT)) . "', '" . $email . "' ,'" . $salt1 . "', '" . $salt2 . "', 'root','{$token}','" . time() . "');";
 
     mysqli_query($con, $sqlquery);
 

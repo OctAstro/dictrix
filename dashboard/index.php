@@ -30,6 +30,11 @@ $modules = [
     <script src="../assets/panel/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/panel/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/panel/dist/js/adminlte.js"></script>
+    <style>
+    .hidden {
+        display: none;
+    }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini">

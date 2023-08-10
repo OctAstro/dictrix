@@ -11,7 +11,7 @@ if (file_exists('setup/setup.lock')) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <title><?php echo $dictumConfig['sitename'] ?> - Powered By Dictum</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
     .bd-placeholder-img {
@@ -78,7 +78,7 @@ if (file_exists('setup/setup.lock')) {
     </style>
     <style>
     .body-bg {
-        background: url('./bg/bg.webp?v=1.0');
+        background: url('./bg/bg.png');
         backdrop-filter: brightness(60%) !important;
     }
     </style>
@@ -93,7 +93,7 @@ if (file_exists('setup/setup.lock')) {
                 </h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link active" aria-current="page" href="#">主页</a>
-                    <a class="nav-link" href="./api?type=help">开放接口</a>
+                    <a class="nav-link">开放接口</a>
                     <a class="nav-link" href="./login">管理后台</a>
                 </nav>
             </div>
@@ -111,12 +111,13 @@ if (file_exists('setup/setup.lock')) {
                 document.write(new Date().getFullYear());
                 </script>
                 Dictum Team<br />Powered By
-                <span><a class="copyright-link" href="//github.com/ImJingLan/dictum">Dictum</a></span>
+                <span><a class="copyright-link" href="//github.com/ImJingLan/dictrix">Dictrix</a></span>
             </p>
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="./assets/dist/js/jquery.min.js"></script>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     function dictum() {
         $.post('./api/dictums/?module=json', function(a) {

@@ -1,3 +1,4 @@
 *.lock
 config.php
 dev
+.vs
