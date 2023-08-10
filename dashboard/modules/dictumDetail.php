@@ -34,12 +34,12 @@ $cid = isset($_GET['cid']) ? (int)$_GET['cid'] : 0;
                 <div class="card">
                     <div class="card-header border-0">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">发生了错误：非法ID</h3>
+                            <h3 class="card-title">发生了错误: 非法ID</h3>
                         </div>
                     </div>
                     <div class="card-body p-0 table-responsive">
                         <h3 class="text-primary" style="padding: 16px; padding-left: 24px">
-                            你的语句ID不合法！
+                            你的语句ID不合法!
                         </h3>
                     </div>
                 </div>
@@ -53,15 +53,15 @@ $cid = isset($_GET['cid']) ? (int)$_GET['cid'] : 0;
                 <div class="card">
                     <div class="card-header border-0">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">发生了错误：未提供ID或ID为0</h3>
+                            <h3 class="card-title">发生了错误: 未提供ID或ID为0</h3>
                         </div>
                     </div>
                     <div class="card-body p-0 table-responsive">
                         <h3 class="text-primary" style="padding: 16px; padding-left: 24px">
-                            你未提供语句ID或ID为0，请前往
+                            你未提供语句ID或ID为0, 请前往
                             <a href="?page=dictumList" class="btn btn-primary"><i class="nav-icon fas fa-list"></i>
                                 语句列表</a>
-                            页面，点击希望查看的语句旁的Info按钮查看
+                            页面, 点击希望查看的语句旁的Info按钮查看
                         </h3>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ $cid = isset($_GET['cid']) ? (int)$_GET['cid'] : 0;
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3 class="text-primary">语句ID：<?php echo $dictums['id'] ?></h3>
+                        <h3 class="text-primary">语句ID: <?php echo $dictums['id'] ?></h3>
                         <table>
                             <tbody>
                                 <tr>
@@ -133,7 +133,6 @@ $cid = isset($_GET['cid']) ? (int)$_GET['cid'] : 0;
                                 </tr>
                             </tbody>
                         </table>
-                        <span>请妥善保管令牌，令牌拥有你在站点的所有权限</span>
                     </div>
                 </div>
             </div>

@@ -16,9 +16,4 @@ $dictumConfig = [
 	'description'        => '{DESCRIPTION}',
 ];
 
-function mysqlInfo($key,$dictumConfig)
-{
-    return $dictumConfig['mysql'][$key];
-}
-
 ?>

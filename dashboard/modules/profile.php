@@ -124,6 +124,8 @@ $siteInfo = [
 
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>
@@ -175,7 +177,7 @@ function refreshToken() {
     if (vone && vtwo) {
         $.post(
             '../api/users/?module=refreshToken', {
-                passWd: $('#rT_passwd').val(),
+                password: $('#rT_passwd').val(),
                 oldToken: '<?php echo $_SESSION['userToken']; ?>',
             },
             function(a) {
