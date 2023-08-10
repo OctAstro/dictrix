@@ -86,11 +86,11 @@ if (file_exists('setup/setup.lock')) {
 
 <body class="d-flex h-100 text-center text-white body-bg">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
+        <header class="mb-auto mt-3">
             <div>
-                <h3 class="float-md-start mb-0">
+                <h4 class="float-md-start fw-semibold" style="text-shadow: 2px 2px 10px #00000063;">
                     <?php echo $dictumConfig['sitename'] ?>
-                </h3>
+                </h4>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link active" aria-current="page" href="#">主页</a>
                     <a class="nav-link" href="./api?type=help">开放接口</a>
