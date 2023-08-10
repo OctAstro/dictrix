@@ -94,9 +94,10 @@ if (isset($_SESSION['isLogin'])) {
         <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="logintask()">
             登录 | Sign in
         </button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+        <a type="button" class=" mt-3 btn btn-outline-secondary" href="../">返回主页</a>
+        <p class="mt-1 mb-3 text-muted">&copy; 2021 – 2023</p>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/dist/js/jquery.min.js"></script>
 
     <script>
     function logintask() {

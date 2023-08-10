@@ -68,13 +68,12 @@ create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 
     mysqli_query($con, $sqlquery);
 
-    $sqlquery = "INSERT INTO  " . $dbdictum . " (`author`, `creator`, `dictum`, `create_date`) VALUES ('RGljdHVtIFRlYW0=', 'RGljdHVtIFRlYW0=', '5LuW5Lus6K+06KaB5oiS5LqG5L2g55qE54uC77yM5bCx5YOP5pOm5o6J5LqG5rGh5Z6i', current_timestamp());";
+    $sqlquery = "INSERT INTO  " . $dbdictum . " (`author`, `creator`, `dictum`, `create_date`) VALUES ('5pqu5YWJ5LmL5Z+O=', 'WXVyaWs=', '5rWu5LiW5LiH5Y2D77yM5ZC+54ix5pyJ5LiJ44CC5pel77yM5pyI5LiO5Y2/44CC5pel5Li65pyd77yM5pyI5Li65pqu77yM5Y2/5Li65pyd5pyd5pqu5pqu44CC', current_timestamp());";
     mysqli_query($con, $sqlquery);
 
     $sqlquery = "CREATE TABLE " . $dbusers . " (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(255) NOT NULL,
-nickname text NOT NULL,
 password VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL,
 salt1 VARCHAR(255) NOT NULL,

@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
             $_SESSION['user'] = $row['username'];
             $_SESSION['userId'] = $row['id'];
             $_SESSION['userGroup'] = $row['usergroup'];
-            $_SESSION['passWord'] = $PassWD;
+            $_SESSION['passWord'] = $password;
             $_SESSION['reg_date'] = $row['reg_date'];
             $_SESSION['email'] = base64_decode($row['email']);
         } else {
