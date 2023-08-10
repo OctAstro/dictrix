@@ -1,7 +1,7 @@
 <?php
 
 $userName = $_POST['username'];
-$PassWD = $_POST['passwd'];
+$password = $_POST['password'];
 
 $conn = mysqli_connect($dbHost, $dbUser, $dbPasswd, $dbName, $dbPort);
 
@@ -12,7 +12,7 @@ $result = mysqli_query($conn, "SELECT * FROM " . $Usersdb . " WHERE username = '
 if (mysqli_num_rows($result) > 0) {
 
     while ($row = mysqli_fetch_array($result)) {
-        if (password_verify($row['salt1'] . $PassWD . $row['salt2'], base64_decode($row['passwd']))) {
+        if (password_verify($row['salt1'] . $password . $row['salt2'], base64_decode($row['password']))) {
             echo json_encode(array('code' => 200, 'msg' => '密码正确', "token" => $row['token']), JSON_UNESCAPED_UNICODE);
             $_SESSION['isLogin'] = 1;
             $_SESSION['userToken'] = $row['token'];

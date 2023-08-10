@@ -18,7 +18,7 @@ if (isset($_SESSION['isLogin'])) {
     <title>登录管理面板</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
     html,
@@ -101,14 +101,14 @@ if (isset($_SESSION['isLogin'])) {
     <script>
     function logintask() {
         var username = $('#username').val();
-        var passwd = $('#password').val();
-        if (!username || !passwd) {
+        var password = $('#password').val();
+        if (!username || !password) {
             alert('账号或密码不得为空');
         } else {
             $.post(
                 '../api/users/?module=login', {
                     username: username,
-                    passwd: passwd,
+                    password: password,
                 },
                 function(a) {
                     var a = JSON.parse(a);

@@ -1,297 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <title>安装程序 | Setup</title>
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .container {
-        max-width: 960px;
-      }
-    </style>
-  </head>
-
-  <body class="bg-light">
-    <div class="container">
-      <main>
-        <div class="py-5 text-center">
-          <a href="https://github.com/ImJingLan/dictum"
-            ><img
-              class="d-block mx-auto mb-4"
-              src="../assets/brand/logo.svg?v1.0"
-              alt=""
-              width="80"
-              height="80"
-          /></a>
-          <h2>安装程序 | Setup</h2>
-          <p class="lead">我们需要收集一些信息来进行安装</p>
-        </div>
-        <div id="forms" class="row g-6">
-          <div class="col-md-12 col-lg-12">
-            <h4 class="mb-3">数据库</h4>
-
-            <div class="row g-3">
-              <div>
-                <div class="col-12">
-                  <label for="dbhost" class="form-label"> 数据库地址 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dbhost"
-                      value="localhost"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供数据库名</div>
-                  </div>
-                  <small class="text-muted">
-                    通常为本地地址, 若您不清楚该项设置, 请勿修改
-                  </small>
-                </div>
-                <div class="col-12">
-                  <label for="dbport" class="form-label"> 数据库地址 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dbport"
-                      value="3306"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供数据库名</div>
-                  </div>
-                  <small class="text-muted">
-                    通常为3306端口, 若您不清楚该项设置, 请勿修改
-                  </small>
-                </div>
-                <div class="col-12">
-                  <label for="username" class="form-label"> 数据库名 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dbname"
-                      value="dictum"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供数据库名</div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <label for="username" class="form-label">
-                    数据库用户名
-                  </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dbusername"
-                      value="dictum"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供数据库用户名</div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <label for="dbpasswd" class="form-label"> 数据库密码 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="dbpasswd"
-                      placeholder=""
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供数据库密码</div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <label for="dbprefix" class="form-label"> 数据库前缀 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dbprefix"
-                      value="dic_"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供数据库密码</div>
-                  </div>
-                  <small class="text-muted">
-                    若您想在一个数据库中安装多个语录站点请修改，否则无需理会
-                  </small>
-                </div>
-              </div>
-
-              <hr class="my-4" />
-
-              <h4 class="mb-3">站点信息</h4>
-              <div>
-                <div class="col-12">
-                  <label for="sitename" class="form-label"> 站点名称 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="sitename"
-                      value="Dictum 语录"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供站点名称</div>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <label for="description" class="form-label"> 站点描述 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="description"
-                      value="咕咕咕咕咕"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供站点名称</div>
-                  </div>
-                </div>
-              </div>
-
-              <hr class="my-4" />
-
-              <h4 class="mb-3">管理员信息</h4>
-              <div>
-                <div class="col-12">
-                  <label for="username" class="form-label">
-                    管理员用户名
-                  </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="username"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供管理员用户名</div>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <label for="dbpasswd" class="form-label"> 管理员密码 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="passwd"
-                      placeholder=""
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供管理员密码</div>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <label for="mgemail" class="form-label"> 管理员邮箱 </label>
-                  <div class="input-group has-validation">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="email"
-                      required
-                    />
-                    <div class="invalid-feedback">你需要提供管理员邮箱</div>
-                  </div>
-                </div>
-              </div>
-
-              <hr class="my-4" />
-              <small class="text-muted">
-                安装即表示你已阅读并<b>完全同意</b
-                ><a href="//github.com/imjinglan/imjinglan/dictum.md"
-                  >DICTUM 用户须知</a
-                >
-              </small>
-              <button class="w-100 btn btn-primary btn-lg" onclick="setup()">
-                安装
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div id="finish1" class="row g-6" style="display: none">
-          <div class="col-md-12 col-lg-12">
-            <h4 class="mb-3">
-              <span id="title1"></span>
-            </h4>
-            <p>
-              <span id="notice1"></span>
-            </p>
-          </div>
-        </div>
-      </main>
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">
-          &copy; 2021–
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Dictum Team
-        </p>
-      </footer>
-    </div>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      function setup() {
-        $.post(
-          "install.php",
-          {
-            dbhost: $("#dbhost").val(),
-            dbport: $("#dbport").val(),
-            dbusername: $("#dbusername").val(),
-            dbname: $("#dbname").val(),
-            dbpasswd: $("#dbpasswd").val(),
-            dbprefix: $("#dbprefix").val(),
-
-            sitename: $("#sitename").val(),
-            description: $("#description").val(),
-
-            username: $("#username").val(),
-            passwd: $("#passwd").val(),
-            email: $("#email").val(),
-          },
-          function (a) {
-            console.log(a);
-            a = JSON.parse(a);
-            $("#forms").css("display", "none");
-            $("#finish1").css("display", "");
-            if (a["code"] == 1) {
-              $("#title1").html("安装完成");
-              $("#notice1").html(
-                '你的Dictum已经安装完成，<a href="../">点我返回主页</a>'
-              );
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <title>安装程序 | Setup</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
             }
-            if (a["code"] == 0) {
-              $("#title1").html("Ops! 发现了错误");
-              $("#notice1").html("安装过程中发现了错误: Dictum已正确安装");
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
             }
-          }
-        );
-      }
-    </script>
-  </body>
+            .container {
+                max-width: 960px;
+            }
+        </style>
+    </head>
+
+    <body class="bg-light">
+        <div class="container">
+            <main>
+                <div class="py-5 text-center">
+                    <a href="https://github.com/ImJingLan/dictum"
+                        ><img
+                            class="d-block mx-auto mb-4"
+                            src="../assets/brand/logo.svg?v1.0"
+                            alt=""
+                            width="80"
+                            height="80"
+                    /></a>
+                    <h2>安装程序 | Setup</h2>
+                    <p class="lead">我们需要收集一些信息来进行安装</p>
+                </div>
+                <div id="forms" class="row g-6">
+                    <div class="col-md-12 col-lg-12">
+                        <h4 class="mb-3">数据库</h4>
+
+                        <div class="row g-3">
+                            <div>
+                                <div class="col-12">
+                                    <label for="dbhost" class="form-label">
+                                        数据库地址
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="dbhost"
+                                            value="localhost"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供数据库名
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">
+                                        通常为本地地址, 若您不清楚该项设置,
+                                        请勿修改
+                                    </small>
+                                </div>
+                                <div class="col-12">
+                                    <label for="dbport" class="form-label">
+                                        数据库地址
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="dbport"
+                                            value="3306"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供数据库名
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">
+                                        通常为3306端口, 若您不清楚该项设置,
+                                        请勿修改
+                                    </small>
+                                </div>
+                                <div class="col-12">
+                                    <label for="username" class="form-label">
+                                        数据库名
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="dbname"
+                                            value="dictum"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供数据库名
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="username" class="form-label">
+                                        数据库用户名
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="dbusername"
+                                            value="dictum"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供数据库用户名
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="dbpasswd" class="form-label">
+                                        数据库密码
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            id="dbpasswd"
+                                            placeholder=""
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供数据库密码
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="dbprefix" class="form-label">
+                                        数据库前缀
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="dbprefix"
+                                            value="dic_"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供数据库密码
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">
+                                        若您想在一个数据库中安装多个语录站点请修改，否则无需理会
+                                    </small>
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <h4 class="mb-3">站点信息</h4>
+                            <div>
+                                <div class="col-12">
+                                    <label for="sitename" class="form-label">
+                                        站点名称
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="sitename"
+                                            value="Dictum 语录"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供站点名称
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="description" class="form-label">
+                                        站点描述
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="description"
+                                            value="咕咕咕咕咕"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供站点名称
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <h4 class="mb-3">管理员信息</h4>
+                            <div>
+                                <div class="col-12">
+                                    <label for="username" class="form-label">
+                                        管理员用户名
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="username"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供管理员用户名
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="username" class="form-label">
+                                        管理员昵称
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="nickname"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供管理员昵称
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="dbpasswd" class="form-label">
+                                        管理员密码
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            id="password"
+                                            placeholder=""
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供管理员密码
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="mgemail" class="form-label">
+                                        管理员邮箱
+                                    </label>
+                                    <div class="input-group has-validation">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="email"
+                                            required
+                                        />
+                                        <div class="invalid-feedback">
+                                            你需要提供管理员邮箱
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+                            <small class="text-muted">
+                                安装即表示你已阅读并<b>完全同意</b
+                                ><a
+                                    href="//github.com/imjinglan/imjinglan/dictum.md"
+                                    >DICTUM 用户须知</a
+                                >
+                            </small>
+                            <button
+                                class="w-100 btn btn-primary btn-lg"
+                                onclick="setup()"
+                            >
+                                安装
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="finish1" class="row g-6" style="display: none">
+                    <div class="col-md-12 col-lg-12">
+                        <h4 class="mb-3">
+                            <span id="title1"></span>
+                        </h4>
+                        <p>
+                            <span id="notice1"></span>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">
+                    &copy; 2021–
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Dictum Team
+                </p>
+            </footer>
+        </div>
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function setup() {
+                $.post(
+                    "install.php",
+                    {
+                        dbhost: $("#dbhost").val(),
+                        dbport: $("#dbport").val(),
+                        dbusername: $("#dbusername").val(),
+                        dbname: $("#dbname").val(),
+                        dbpasswd: $("#dbpasswd").val(),
+                        dbprefix: $("#dbprefix").val(),
+
+                        sitename: $("#sitename").val(),
+                        description: $("#description").val(),
+
+                        username: $("#username").val(),
+                        password: $("#password").val(),
+                        email: $("#email").val(),
+                    },
+                    function (a) {
+                        console.log(a);
+                        a = JSON.parse(a);
+                        $("#forms").css("display", "none");
+                        $("#finish1").css("display", "");
+                        if (a["code"] == 1) {
+                            $("#title1").html("安装完成");
+                            $("#notice1").html(
+                                '你的Dictum已经安装完成，<a href="../">点我返回主页</a>'
+                            );
+                        }
+                        if (a["code"] == 0) {
+                            $("#title1").html("Ops! 发现了错误");
+                            $("#notice1").html(
+                                "安装过程中发现了错误: Dictum已正确安装"
+                            );
+                        }
+                    }
+                );
+            }
+        </script>
+    </body>
 </html>

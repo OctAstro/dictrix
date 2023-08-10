@@ -11,7 +11,7 @@ if (file_exists('setup/setup.lock')) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <title><?php echo $dictumConfig['sitename'] ?> - Powered By Dictum</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
     .bd-placeholder-img {
@@ -116,7 +116,8 @@ if (file_exists('setup/setup.lock')) {
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="./assets/dist/js/jquery.min.js"></script>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     function dictum() {
         $.post('./api/dictums/?module=json', function(a) {
